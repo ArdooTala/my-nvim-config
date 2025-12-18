@@ -1,6 +1,15 @@
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
+-- Set preview size to 70% (30% left)
+vim.g.netrw_winsize = -50
+-- Set netrw vertical preview split
+vim.g.netrw_preview = 1
+-- Set default listing to tree view
+vim.g.netrw_liststyle = 3
+-- Set netrw splitting to left
+vim.g.netrw_altv = 'spl'
+
 vim.o.colorcolumn = '100'
 
 vim.o.tabstop = 4
@@ -30,6 +39,9 @@ vim.o.breakindent = true
 
 -- Save undo history
 vim.o.undofile = true
+
+-- No swap file
+vim.o.swapfile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
