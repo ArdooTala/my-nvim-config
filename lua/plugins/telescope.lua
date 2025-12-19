@@ -1,66 +1,66 @@
 vim.pack.add(
     {
-        {src="https://github.com/nvim-lua/plenary.nvim"},
-        {src="https://github.com/nvim-telescope/telescope.nvim"},
+        { src = "https://github.com/nvim-lua/plenary.nvim" },
+        { src = "https://github.com/nvim-telescope/telescope.nvim" },
     },
-    {confirm=false}
+    { confirm = false }
 )
 
 
-        -- event = 'VimEnter',
-        -- dependencies = {
-        --     'nvim-lua/plenary.nvim',
-        --     { -- If encountering errors, see telescope-fzf-native README for installation instructions
-        --         'nvim-telescope/telescope-fzf-native.nvim',
-        --
-        --         -- `build` is used to run some command when the plugin is installed/updated.
-        --         -- This is only run then, not every time Neovim starts up.
-        --         build = 'make',
-        --
-        --         -- `cond` is a condition used to determine whether this plugin should be
-        --         -- installed and loaded.
-        --         cond = function()
-        --             return vim.fn.executable 'make' == 1
-        --         end,
-        --     },
-        --     { 'nvim-telescope/telescope-ui-select.nvim' },
-        --
-        --     -- Useful for getting pretty icons, but requires a Nerd Font.
-        --     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
-        -- },
+-- event = 'VimEnter',
+-- dependencies = {
+--     'nvim-lua/plenary.nvim',
+--     { -- If encountering errors, see telescope-fzf-native README for installation instructions
+--         'nvim-telescope/telescope-fzf-native.nvim',
+--
+--         -- `build` is used to run some command when the plugin is installed/updated.
+--         -- This is only run then, not every time Neovim starts up.
+--         build = 'make',
+--
+--         -- `cond` is a condition used to determine whether this plugin should be
+--         -- installed and loaded.
+--         cond = function()
+--             return vim.fn.executable 'make' == 1
+--         end,
+--     },
+--     { 'nvim-telescope/telescope-ui-select.nvim' },
+--
+--     -- Useful for getting pretty icons, but requires a Nerd Font.
+--     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+-- },
 
-require('telescope').setup{
-  defaults = {
-    -- Default configuration for telescope goes here:
-    -- config_key = value,
-    mappings = {
-      i = {
-        -- map actions.which_key to <C-h> (default: <C-/>)
-        -- actions.which_key shows the mappings for your picker,
-        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-        ["<C-h>"] = "which_key"
-      }
-    }
-  },
-  pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
-  },
-  extensions = {
-    -- Your extension configuration goes here:
-    ['ui-select'] = {
-        require('telescope.themes').get_dropdown(),
+require('telescope').setup {
+    defaults = {
+        -- Default configuration for telescope goes here:
+        -- config_key = value,
+        mappings = {
+            i = {
+                -- map actions.which_key to <C-h> (default: <C-/>)
+                -- actions.which_key shows the mappings for your picker,
+                -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+                ["<C-h>"] = "which_key"
+            }
+        }
     },
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
-  }
+    pickers = {
+        -- Default configuration for builtin pickers goes here:
+        -- picker_name = {
+        --   picker_config_key = value,
+        --   ...
+        -- }
+        -- Now the picker_config_key will be applied every time you call this
+        -- builtin picker
+    },
+    extensions = {
+        -- Your extension configuration goes here:
+        ['ui-select'] = {
+            require('telescope.themes').get_dropdown(),
+        },
+        -- extension_name = {
+        --   extension_config_key = value,
+        -- }
+        -- please take a look at the readme of the extension you want to configure
+    }
 }
 
 -- Two important keymaps to use while in Telescope are:

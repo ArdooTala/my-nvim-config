@@ -1,8 +1,8 @@
 vim.pack.add(
     {
-        {src="https://github.com/folke/which-key.nvim.git"},
-    }, 
-    {confirm=false}
+        { src = "https://github.com/folke/which-key.nvim.git" },
+    },
+    { confirm = false }
 )
 
 require("which-key").setup({

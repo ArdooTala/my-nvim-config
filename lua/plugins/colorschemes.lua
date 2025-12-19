@@ -1,10 +1,10 @@
 vim.pack.add(
     {
-        {src="https://github.com/projekt0n/github-nvim-theme.git"},
+        { src = "https://github.com/projekt0n/github-nvim-theme.git" },
     },
-    {confirm=false}
+    { confirm = false }
 )
 
 require('github-theme').setup({})
 
-vim.cmd ('colorscheme github_dark_default')
+vim.cmd('colorscheme github_dark_default')

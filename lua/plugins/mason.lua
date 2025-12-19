@@ -1,8 +1,8 @@
 vim.pack.add(
     {
-        {src="https://github.com/mason-org/mason.nvim.git"},
+        { src = "https://github.com/mason-org/mason.nvim.git" },
     },
-    {confirm=false}
+    { confirm = false }
 )
 
 require("mason").setup()
