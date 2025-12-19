@@ -1,7 +1,10 @@
-vim.pack.add({
-    {src="https://github.com/nvim-lua/plenary.nvim", confirm=false},
-    {src="https://github.com/nvim-telescope/telescope.nvim", confirm=false}
-})
+vim.pack.add(
+    {
+        {src="https://github.com/nvim-lua/plenary.nvim"},
+        {src="https://github.com/nvim-telescope/telescope.nvim"},
+    },
+    {confirm=false}
+)
 
 
         -- event = 'VimEnter',

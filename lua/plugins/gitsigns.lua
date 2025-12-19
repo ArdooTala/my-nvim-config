@@ -1,6 +1,9 @@
-vim.pack.add({
-    {src="https://github.com/lewis6991/gitsigns.nvim.git", confirm=false}
-})
+vim.pack.add(
+    {
+        {src="https://github.com/lewis6991/gitsigns.nvim.git"},
+    },
+    {confirm=false}
+)
 
 -- Adds git related signs to the gutter, as well as utilities for managing changes
 require('gitsigns').setup {

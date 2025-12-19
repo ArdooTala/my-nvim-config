@@ -1,6 +1,9 @@
-vim.pack.add({
-    {src="https://github.com/nvim-lualine/lualine.nvim.git", confirm=false}
-})
+vim.pack.add(
+    {
+        {src="https://github.com/nvim-lualine/lualine.nvim.git"},
+    },
+    {confirm=false}
+)
 
 require("lualine").setup({
   options = {
