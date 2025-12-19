@@ -1,3 +1,7 @@
-return {
-    'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
-}
+require("plugins.colorschemes")
+require("plugins.gitsigns")
+require("plugins.which-key")
+require("plugins.statusline")
+require("plugins.treesitter")
+require("plugins.mason")
+require("plugins.telescope")
