@@ -1,4 +1,6 @@
-vim.pack.add({"https://github.com/folke/which-key.nvim.git"})
+vim.pack.add({
+    {src="https://github.com/folke/which-key.nvim.git", confirm=false}
+})
 
 require("which-key").setup({
     -- delay between pressing a key and opening which-key (milliseconds)

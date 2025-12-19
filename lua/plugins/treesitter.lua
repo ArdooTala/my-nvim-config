@@ -1,5 +1,5 @@
 vim.pack.add({
-    {src="https://github.com/nvim-treesitter/nvim-treesitter.git", version="master"}
+    {src="https://github.com/nvim-treesitter/nvim-treesitter.git", version="master", confirm=false}
 })
 
 require("nvim-treesitter.configs").setup({

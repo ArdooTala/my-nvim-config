@@ -1,4 +1,6 @@
-vim.pack.add({"https://github.com/projekt0n/github-nvim-theme.git"})
+vim.pack.add({
+    {src="https://github.com/projekt0n/github-nvim-theme.git", confirm=false}
+})
 
 require('github-theme').setup({})
 
