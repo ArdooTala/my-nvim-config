@@ -82,3 +82,4 @@ vim.o.confirm = true
 vim.o.autoread = true
 
 vim.opt.winborder = 'rounded'
+vim.opt.pumborder = 'rounded'
