@@ -80,6 +80,9 @@ vim.o.confirm = true
 
 -- Read files automatically
 vim.o.autoread = true
+vim.o.autoindent = true
 
 vim.opt.winborder = 'rounded'
 vim.opt.pumborder = 'rounded'
+vim.opt.pumblend=30
+

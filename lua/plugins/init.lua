@@ -7,3 +7,4 @@ require("plugins.mason")
 require("plugins.telescope")
 require("plugins.conform")
 require("plugins.copilot")
+

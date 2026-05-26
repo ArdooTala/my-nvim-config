@@ -1,7 +1,7 @@
 return {
     cmd = { 'clangd' },
 
-    filetypes = { 'c', 'cpp', 'h', 'hpp' },
+    filetypes = { 'c', 'cpp', 'cppm', 'objc', 'objcpp' },
 
     root_markers = { 'compile_commands.json', 'CMakeLists.txt', '.git', },
     single_file_support = true,

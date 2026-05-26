@@ -1,11 +1,11 @@
 vim.pack.add(
     {
-        { src = "https://github.com/nvim-treesitter/nvim-treesitter.git", version = "master" },
+        { src = "https://github.com/nvim-treesitter/nvim-treesitter.git", branch="main" },
     },
     { confirm = false }
 )
 
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter").setup({
     ensure_installed = { 'bash', 'c', 'cpp', 'python', 'dot', 'diff', 'html',
         'lua', 'luadoc', 'markdown', 'markdown_inline', 'query',
         'vim', 'vimdoc' },

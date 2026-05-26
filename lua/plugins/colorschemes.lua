@@ -5,6 +5,18 @@ vim.pack.add(
     { confirm = false }
 )
 
-require('github-theme').setup({})
+require('github-theme').setup({
+    options = {
+        transparent = true,
+        dim_inactive = true,
+    },
+    palettes = {},
+    specs = {},
+    groups = {
+        all = {
+            FloatBorder = { fg = 'fg1', bg = 'NONE' }
+        }
+    },
+})
 
 vim.cmd('colorscheme github_dark_default')
