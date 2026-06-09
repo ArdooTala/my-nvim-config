@@ -86,3 +86,4 @@ vim.opt.winborder = 'rounded'
 vim.opt.pumborder = 'rounded'
 vim.opt.pumblend=30
 
+vim.opt.path:append { '**' }
