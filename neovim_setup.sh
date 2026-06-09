@@ -4,7 +4,7 @@
 apt update
 apt -y --no-install-recommends install \
     ripgrep xclip curl git \
-    python-dev python-pip python3-dev python3-pip python3-neovim 
+    python3-dev python3-pip python3-neovim 
 
 # Config
 git clone https://github.com/ArdooTala/my-nvim-config.git ~/.config/nvim/
