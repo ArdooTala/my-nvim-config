@@ -31,8 +31,6 @@ vim.pack.add(
 
 require('telescope').setup {
     defaults = {
-        -- Default configuration for telescope goes here:
-        -- config_key = value,
         mappings = {
             i = {
                 -- map actions.which_key to <C-h> (default: <C-/>)
@@ -40,16 +38,16 @@ require('telescope').setup {
                 -- e.g. git_{create, delete, ...}_branch for the git_branches picker
                 ["<C-h>"] = "which_key"
             }
-        }
+        },
+        layout_strategy = "vertical",
     },
     pickers = {
-        -- Default configuration for builtin pickers goes here:
-        -- picker_name = {
-        --   picker_config_key = value,
-        --   ...
-        -- }
-        -- Now the picker_config_key will be applied every time you call this
-        -- builtin picker
+        find_files = {
+            path_display = { 'filename_first', 'truncate' },
+        },
+        git_files = {
+            path_display = { 'filename_first', 'truncate' },
+        }
     },
     extensions = {
         -- Your extension configuration goes here:
@@ -76,13 +74,22 @@ local builtin = require 'telescope.builtin'
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sF', builtin.git_files, { desc = '[S]earch Git [F]iles' })
 vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>sq', builtin.quickfix, { desc = '[S]earch Quickfix' })
 vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+
+vim.keymap.set('n', '<leader>rr', builtin.lsp_references, { desc = 'Telescope - lsp_references' })
+vim.keymap.set('n', '<leader>rd', builtin.lsp_definitions, { desc = 'Telescope - lsp_definitions' })
+vim.keymap.set('n', '<leader>ri', builtin.lsp_implementations, { desc = 'Telescope - lsp_implementations' })
+vim.keymap.set('n', '<leader>rt', builtin.lsp_type_definitions, { desc = 'Telescope - lsp_type_definitions' })
+vim.keymap.set('n', '<leader>rs', builtin.lsp_document_symbols, { desc = 'Telescope - lsp_document_symbols' })
+vim.keymap.set('n', '<leader>rS', builtin.lsp_workspace_symbols, { desc = 'Telescope - lsp_workspace_symbols' })
 
 -- Slightly advanced example of overriding default behavior and theme
 vim.keymap.set('n', '<leader>/', function()
