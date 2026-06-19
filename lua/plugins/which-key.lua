@@ -6,6 +6,7 @@ vim.pack.add(
 )
 
 require("which-key").setup({
+    preset = 'helix',
     -- delay between pressing a key and opening which-key (milliseconds)
     -- this setting is independent of vim.o.timeoutlen
     delay = 0,
@@ -46,9 +47,11 @@ require("which-key").setup({
         },
     },
 
+
     -- Document existing key chains
     spec = {
         { '<leader>s', group = '[S]earch' },
+        { '<leader>r', group = 'LSP' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
     },
