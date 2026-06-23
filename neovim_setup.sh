@@ -9,8 +9,8 @@ apt -y --no-install-recommends install \
     python3-dev python3-pip python3-neovim 
 
 # Config
-git clone https://github.com/ArdooTala/my-nvim-config.git ~/.config/nvim/
-echo 'export TERM="xterm-256color"' >> ~/.bashrc
+# git clone https://github.com/ArdooTala/my-nvim-config.git ~/.config/nvim/
+# echo 'export TERM="xterm-256color"' >> ~/.bashrc
 
 # Install Neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
