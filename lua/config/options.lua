@@ -87,3 +87,8 @@ vim.opt.pumborder = 'rounded'
 vim.opt.pumblend=30
 
 vim.opt.path:append { '**' }
+
+vim.opt.foldmethod = 'syntax'
+vim.opt.foldnestmax = 2
+vim.opt.foldcolumn = '2'
+vim.opt.foldlevelstart = 99
